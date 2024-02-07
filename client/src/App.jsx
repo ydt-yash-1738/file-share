@@ -7,6 +7,7 @@ function App() {
   const [file, setFile] = useState("");
   const [result, setResult] = useState("");
   const [fileName, setFileName] = useState(""); // State to hold the name of the uploaded file
+  const [copied, setCopied] = useState(false); // State to track whether the link has been copied
   const fileinputRef = useRef();
 
   useEffect(() => {
@@ -30,6 +31,7 @@ function App() {
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(result);
+    setCopied(true); // Set copied state to true
   };
 
   return (
@@ -44,7 +46,7 @@ function App() {
           <div className="flex items-center justify-between w-full mb-4">
             <img src={owlImage} alt="Uploaded file" className="max-w-32 h-auto rounded-lg mr-4" />
             <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg" onClick={copyToClipboard}>
-              Copy Link
+              {copied ? "Copied!" : "Copy Link"}
             </button>
           </div>
         )}
