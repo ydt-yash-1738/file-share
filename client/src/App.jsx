@@ -38,7 +38,7 @@ function App() {
     <div className="h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url(${background})`, filter: 'brightness(0.6)' }}>
       <div className="bg-white rounded-lg p-8 shadow-lg bg-opacity-70 max-w-md w-full mx-4 flex flex-col items-center justify-center">
         <h1 className="font-bold text-3xl text-center text-gray-800 mb-4">FILE SHARING MADE EASY</h1>
-        <p className="text-lg text-gray-700 text-center mb-2">Drop your files here and share the link with your friends!</p>
+        <p className="text-lg text-gray-700 text-center mb-2">Drop your files here and share the link with your friends!(First upload takes about a minute.)</p>
         {fileName && (
           <p className="text-lg text-gray-700 text-center font-bold mb-4">Uploaded file: {fileName}</p>
         )}
