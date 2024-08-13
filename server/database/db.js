@@ -8,7 +8,7 @@ const DBConnection = async() => {
     const USERNAME = process.env.DB_USERNAME;
     const PASSWORD = process.env.DB_PASSWORD;
     try{
-        await mongoose.connect(`mongodb://${USERNAME}:${PASSWORD}@ac-z9kspjk-shard-00-00.zknqj2u.mongodb.net:27017,ac-z9kspjk-shard-00-01.zknqj2u.mongodb.net:27017,ac-z9kspjk-shard-00-02.zknqj2u.mongodb.net:27017/?ssl=true&replicaSet=atlas-5tcqrs-shard-0&authSource=admin&retryWrites=true&w=majority`, {useNewUrlParser: true});
+        await mongoose.connect(`mongodb+srv://${USERNAME}:${PASSWORD}@cluster0.pbu4g.mongodb.net/`, {useNewUrlParser: true});
         console.log("Database connected successfully");
     }catch(error){
         console.error('Error while connecting the database', error.message);
